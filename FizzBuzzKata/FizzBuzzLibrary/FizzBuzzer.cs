@@ -6,24 +6,42 @@ namespace FizzBuzzLibrary
     {
         public static string GetValue(int input)
         {
-            if (input % 5 == 0 && input % 3 == 0)
-            {
-                return "FizzBuzz";
-            }
+            string output = string.Empty;
+
             if (input % 3 == 0)
             {
-                return "Fizz";
+                output += "Fizz";
             }
-
             if (input % 5 == 0)
             {
-                return "Buzz";
+                output += "Buzz";
             }
-            else
+            if (string.IsNullOrEmpty(output))
             {
-                return input.ToString();
+                output = input.ToString();
+               
             }
-            
+            return output;
+
+
+            //if (input % 5 == 0 && input % 3 == 0)
+            //{
+            //    return "FizzBuzz";
+            //}
+            //if (input % 3 == 0)
+            //{
+            //    return "Fizz";
+            //}
+
+            //if (input % 5 == 0)
+            //{
+            //    return "Buzz";
+            //}
+            //else
+            //{
+            //    return input.ToString();
+            //}
+
         }
     }
 }
