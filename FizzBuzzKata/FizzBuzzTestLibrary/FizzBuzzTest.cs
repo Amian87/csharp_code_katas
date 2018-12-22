@@ -1,0 +1,59 @@
+﻿using NUnit.Framework;
+using System;
+using FizzBuzzLibrary;
+
+namespace FizzBuzzTestLibrary
+{
+    [TestFixture]
+    public class FizzBuzzTest
+    {
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(4)]
+        [TestCase(7)]
+        [TestCase(8)]
+        [TestCase(11)]
+        [TestCase(13)]
+        [TestCase(14)]
+        [TestCase(16)]
+        [TestCase(17)]
+        [TestCase(19)]
+        public void When1_Return1(int input)
+        {
+            string output = FizzBuzzer.GetValue(input);
+            Assert.AreEqual(input.ToString(), output);
+        }
+        
+        [TestCase(3)]
+        [TestCase(6)]
+        [TestCase(9)]
+        [TestCase(12)]
+        [TestCase(18)]
+        public void When_Divisible_By3_RetunrnsFizz(int input)
+        {
+            string output = FizzBuzzer.GetValue(input);
+            Assert.AreEqual("Fizz", output);
+
+        }
+
+        [TestCase(5)]
+        [TestCase(10)]
+        [TestCase(20)]
+        public void When5_ReturnsBuzz(int input)
+        {
+            string output = FizzBuzzer.GetValue(input);
+            Assert.AreEqual("Buzz", output);
+        }
+
+        [TestCase(15)]
+
+        public void When_DivisibleBy3_And_DivisbileBy5(int input)
+        {
+            string output = FizzBuzzer.GetValue(input);
+            Assert.AreEqual("FizzBuzz", output);
+        }
+
+
+
+    }
+}
