@@ -1,5 +1,4 @@
-﻿using FizzBuzzLibrary;
-using System;
+﻿using System;
 
 namespace FizzBuzz
 {
